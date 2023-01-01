@@ -134,5 +134,26 @@ body {
 
 */
 .options-container {
-  grid-area: options;
+  display: grid;
+  align-items: center;
+  margin-left: 3.5rem;
+  height: 90%;
+  width: 80%;
+}
+
+.options-btns {
+  height: 100%;
+  gap: 10rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.clear-btn,
+.backspace-btn {
+  cursor: pointer;
+  border-radius: 1rem;
+  font-size: 3rem;
+  margin: 0.7rem;
+  height: 80%;
+  width: 80%;
 }
