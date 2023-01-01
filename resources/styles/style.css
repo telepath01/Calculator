@@ -1,0 +1,42 @@
+body {
+  height: 800px;
+  width: 600px;
+}
+/* The start of the calculator container
+
+
+*/
+.calculator-container {
+  background-color: grey;
+  display: grid;
+  border: 2px solid black;
+  border-radius: 0 0 2rem 2rem;
+  height: 100%;
+  width: 100%;
+  grid-template-rows: 15% 70% 15%;
+  grid-template-areas:
+    "screen"
+    "num-pad"
+    "options";
+}
+
+/* The start of the screen container
+
+*/
+.screen-container {
+  grid-area: screen;
+}
+
+/* The start of the number pad container
+
+*/
+.number-pad-container {
+  grid-area: num-pad;
+}
+
+/* The start of the options container 
+
+*/
+.options-container {
+  grid-area: options;
+}
