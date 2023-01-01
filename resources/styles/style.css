@@ -1,18 +1,33 @@
+@font-face {
+  font-family: DS DIGI;
+  src: url(/resources/fonts/DS-DIGI.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   height: 800px;
   width: 600px;
+  margin-left: 3rem;
+  font-family: sans-serif;
 }
 /* The start of the calculator container
 
 
 */
 .calculator-container {
+  align-content: center;
+  align-items: center;
+  align-self: center;
   background-color: grey;
   display: grid;
   border: 2px solid black;
   border-radius: 0 0 2rem 2rem;
   height: 100%;
   width: 100%;
+
   grid-template-rows: 15% 70% 15%;
   grid-template-areas:
     "screen"
@@ -24,16 +39,97 @@ body {
 
 */
 .screen-container {
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  margin-left: 2%;
+  border: 4px outset black;
+  border-radius: 1rem;
+  background-color: rgb(114, 114, 255);
+  display: grid;
   grid-area: screen;
+  grid-template-rows: 1fr;
+  height: 70%;
+  width: 95%;
+}
+.screen {
+  align-items: center;
+  display: grid;
+  background-color: rgb(59, 59, 59);
+  margin-left: 0.8%;
+  border: 1px solid black;
+  border-radius: 1rem;
+  height: 80%;
+  width: 98%;
+  grid-template-rows: 1fr;
+}
+.screen-output {
+  color: green;
+  align-items: center;
+  justify-content: end;
+  display: flex;
+  flex: 1;
+  margin-left: 1px;
+  margin-right: 1px;
+  font-family: "DS DIGI";
+  font-size: 3.5rem;
+  height: 100%;
 }
 
 /* The start of the number pad container
 
 */
 .number-pad-container {
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 1rem;
+  border-radius: 1rem;
+  display: grid;
+  background-color: rgb(224, 224, 224);
   grid-area: num-pad;
+  height: 95%;
+  width: 95%;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "numbers operators";
+}
+.numbers {
+  display: grid;
+  gap: 1rem;
+  height: 90%;
+  width: 95%;
+  margin-left: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
 }
 
+.num-btn {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: rgb(58, 58, 58);
+  border-radius: 1rem;
+  color: white;
+  font-size: 4rem;
+}
+.operators-container {
+  display: grid;
+  height: 90%;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+
+.num-operator {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  border-radius: 1rem;
+  border: 5px solid black;
+  background-color: rgb(173, 9, 9);
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+}
 /* The start of the options container 
 
 */
