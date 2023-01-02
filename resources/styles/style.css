@@ -120,6 +120,7 @@ body {
 }
 
 .num-operator {
+  cursor: pointer;
   display: grid;
   align-items: center;
   text-align: center;
